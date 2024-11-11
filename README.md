@@ -10,7 +10,7 @@
   4 - Tela de cadastre-se
   5 - Rotina complexa
 ```
-# Responsáveis
-  Alex Narok
-  Diego Nunes
-  Leonardo Pereira
+### Responsáveis
+  - Alex Narok
+  - Diego Nunes
+  - Leonardo Pereira

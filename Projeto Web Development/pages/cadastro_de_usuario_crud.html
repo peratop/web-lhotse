@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="home.html">
+                <img class="img" src="lhotseB.svg" alt="Logo" width="200" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Tela Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro_de_usuario_crud.html">Cadastro de Usuário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro_de_produtos_crud.html">Cadastro de Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro_de_pedidos_crud.html">Cadastro de Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <h2 class="text-center">Cadastro de Usuários</h2>
+        <form id="userForm">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+        <hr>
+        <h3>Lista de Usuários</h3>
+        <table class="table table-striped mt-3" id="userTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="crud-users.js"></script>
+    <footer style="background-color: #0c0c0c; color: #fff; padding: 40px 0; font-family: Arial, sans-serif; margin-top: 200px;">
+        <div style="display: flex; justify-content: space-around; max-width: 1200px; margin: 0 auto;">
+            <!-- Coluna Sobre Nós -->
+            <div style="flex: 1; margin: 0 20px;">
+                <h3 style="border-bottom: 2px solid #555; padding-bottom: 10px;">Sobre Nós</h3>
+                <p>Lhotse Cycles é uma empresa dedicada a fornecer as melhores bicicletas e acessórios para ciclistas de todos os níveis.</p>
+            </div>
+            <!-- Coluna Endereço -->
+            <div style="flex: 1; margin: 0 20px;">
+                <h3 style="border-bottom: 2px solid #555; padding-bottom: 10px;">Endereço</h3>
+                <p>Rua das Montanhas, 123, São Paulo, SP</p>
+            </div>
+            <!-- Coluna Nossas Políticas -->
+            <div style="flex: 1; margin: 0 20px;">
+                <h3 style="border-bottom: 2px solid #555; padding-bottom: 10px;">Nossas Políticas</h3>
+                <p><a href="#" style="color: #fff; text-decoration: none;">Política de Privacidade</a></p>
+                <p><a href="#" style="color: #fff; text-decoration: none;">Termos de Uso</a></p>
+            </div>
+            <!-- Coluna Contatos -->
+            <div style="flex: 1; margin: 0 20px;">
+                <h3 style="border-bottom: 2px solid #555; padding-bottom: 10px;">Contatos</h3>
+                <p>Email: <a href="mailto:contato@lhotsecycles.com" style="color: #fff; text-decoration: none;">contato@lhotsecycles.com</a></p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px; border-top: 1px solid #555; padding-top: 20px;">
+            <p>© Lhotse Cycles 2024 All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

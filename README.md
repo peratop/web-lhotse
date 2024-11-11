@@ -1,4 +1,4 @@
-# web-lhotse
+# Lhotse
   Trabalho de desenvolvimento web com foco em front-end.
   Matéria do professor Cleverson Avelino
 
@@ -7,7 +7,7 @@
   2 - 2 Cruds
   3 - Tela de Login
   4 - Tela de cadastre-se
-  5 - Rotina complexa (Ex: Agendamento de serviço, Venda de um produto)
+  5 - Rotina complexa
 
 # Responsáveis
   Alex Narok

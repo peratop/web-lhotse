@@ -9,54 +9,39 @@
 <body>
     <header class="bg-dark py-3">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="home.html">
-                <img class="img" src="lhotseB.svg" alt="Logo" width="200" class="d-inline-block align-top">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="home.html">Tela Inicial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro_de_usuario_crud.html">Cadastro de Usuário</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro_de_produtos_crud.html">Cadastro de Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro_de_pedidos_crud.html">Cadastro de Pedidos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro.html">Cadastro</a>
-                    </li>
-                </ul>
+            <div class="container-fluid">
+                <!-- Logo alinhado à esquerda -->
+                <a class="navbar-brand" href="home.html">
+                    <img class="img" src="lhotseB.svg" alt="Logo" width="200" class="d-inline-block align-top">
+                </a>
+                <!-- Botão para navegação mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menu de navegação alinhado à direita -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Tela Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro_de_usuario_crud.html">Cadastro de Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro_de_produtos_crud.html">Cadastro de Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <div class="container mt-5">
-        <h2 class="text-center">Cadastro de Usuários</h2>
-        <form id="userForm">
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nome" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="senha" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="senha" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
-        <hr>
         <h3>Lista de Usuários</h3>
         <table class="table table-striped mt-3" id="userTable">
             <thead>
@@ -68,7 +53,7 @@
                 </tr>
             </thead>
             <tbody>
-
+                <!-- Conteúdo será preenchido pelo JavaScript -->
             </tbody>
         </table>
     </div>

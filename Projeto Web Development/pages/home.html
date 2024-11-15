@@ -8,20 +8,24 @@
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <link rel="icon" type="image/x-icon" href="lhotseC.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" cros    sorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="bg-dark py-3">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<header class="bg-dark py-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
             <a class="navbar-brand" href="home.html">
                 <img class="img" src="lhotseB.svg" alt="Logo" width="200" class="d-inline-block align-top">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="home.html">Tela Inicial</a>
                     </li>
@@ -32,9 +36,6 @@
                         <a class="nav-link" href="cadastro_de_produtos_crud.html">Cadastro de Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cadastro_de_pedidos_crud.html">Cadastro de Pedidos</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="login.html">Login</a>
                     </li>
                     <li class="nav-item">
@@ -42,8 +43,9 @@
                     </li>
                 </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
     <div class="banner">
         <div class = "banner-content">
             <div class="logo">
@@ -57,89 +59,96 @@
         <h1>Nossas L-Bikes</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
-<div class = "container-bikes">
-    <div class = "container-city">
-        <div>
-            <h1>L-City</h1>
-            <p>Uma linha de bicicletas perfeitas para o uso em centros urbanos</p>
-        </div>
+    <div class="container-bikes">
+        <div class="container-city">
+            <div>
+                <h1>L-City</h1>
+                <p>Uma linha de bicicletas perfeitas para o uso em centros urbanos</p>
+            </div>
             <div class="container">
                 <div class="card">
                     <img src="bike1.avif" alt="Classica">
                     <h2>L-Urban</h2>
+                    <p class="preco">Preço: R$ 1200,00</p>
                     <p class="disponivel">Disponível</p>
                     <ul>
-                        <li>Caracteristica #1, lorem ipsum dolor sit amet.</li>
-                        <li>Caracteristica #2 lorem ipsum dolor sit amet.</li>
+                        <li>Característica #1, lorem ipsum dolor sit amet.</li>
+                        <li>Característica #2 lorem ipsum dolor sit amet.</li>
                     </ul>
                     <a href="#">Ver detalhes</a>
                 </div>
-            
+    
                 <div class="card">
                     <img src="bike2.webp" alt="Maris">
                     <h2>L-Kids</h2>
+                    <p class="preco">Preço: R$ 650,00</p>
                     <p class="disponivel">Disponível</p>
                     <ul>
-                        <li>Caracteristica #1, lorem ipsum dolor sit amet.</li>
-                        <li>Caracteristica #2 lorem ipsum dolor sit amet.</li>
+                        <li>Característica #1, lorem ipsum dolor sit amet.</li>
+                        <li>Característica #2 lorem ipsum dolor sit amet.</li>
                     </ul>
                     <a href="#">Ver Detalhes</a>
                 </div>
-            
+    
                 <div class="card">
                     <img src="bike3.webp" alt="Ego">
                     <h2>L-Journey</h2>
+                    <p class="preco">Preço: R$ 1500,00</p>
                     <p class="disponivel">Disponível</p>
                     <ul>
-                        <li>Caracteristica #1, lorem ipsum dolor sit amet.</li>
-                        <li>Caracteristica #2 lorem ipsum dolor sit amet.</li>
+                        <li>Característica #1, lorem ipsum dolor sit amet.</li>
+                        <li>Característica #2 lorem ipsum dolor sit amet.</li>
                     </ul>
                     <a href="#">Ver detalhes</a>
                 </div>
             </div>
         </div>
-
-    <div class = "container-mountain">
-        <div>
-            <h1>L-Sports</h1>
-            <p>Uma linha de bicicletas perfeitas para declives e aventuras</p>
-        </div>
+    
+        <div class="container-mountain">
+            <div>
+                <h1>L-Sports</h1>
+                <p>Uma linha de bicicletas perfeitas para declives e aventuras</p>
+            </div>
             <div class="container">
                 <div class="card">
                     <img src="mountain1.avif" alt="Classica">
                     <h2>L-Mountain</h2>
+                    <p class="preco">Preço: R$ 2500,00</p>
                     <p class="disponivel">Disponível</p>
                     <ul>
-                        <li>Caracteristica #1, lorem ipsum dolor sit amet.</li>
-                        <li>Caracteristica #2 lorem ipsum dolor sit amet.</li>
+                        <li>Característica #1, lorem ipsum dolor sit amet.</li>
+                        <li>Característica #2 lorem ipsum dolor sit amet.</li>
                     </ul>
                     <a href="#">Ver detalhes</a>
                 </div>
-            
+    
                 <div class="card">
                     <img src="mountain2.avif" alt="Maris">
                     <h2>L-Enduro</h2>
+                    <p class="preco">Preço: R$ 2345,00</p>
                     <p class="disponivel">Disponível</p>
                     <ul>
-                        <li>Caracteristica #1, lorem ipsum dolor sit amet.</li>
-                        <li>Caracteristica #2 lorem ipsum dolor sit amet.</li>
+                        <li>Característica #1, lorem ipsum dolor sit amet.</li>
+                        <li>Característica #2 lorem ipsum dolor sit amet.</li>
                     </ul>
                     <a href="#">Ver Detalhes</a>
                 </div>
-                
+    
                 <div class="card">
                     <img src="mountain3.avif" alt="Maris">
                     <h2>L-Runner</h2>
+                    <p class="preco">Preço: R$ 6500,00</p>
                     <p class="disponivel">Disponível</p>
                     <ul>
-                        <li>Caracteristica #1, lorem ipsum dolor sit amet.</li>
-                        <li>Caracteristica #2 lorem ipsum dolor sit amet.</li>
+                        <li>Característica #1, lorem ipsum dolor sit amet.</li>
+                        <li>Característica #2 lorem ipsum dolor sit amet.</li>
                     </ul>
                     <a href="#">Ver Detalhes</a>
                 </div>
             </div>
         </div>
-</div>
+    </div>
+    
 </section>
 
  <!-- ISSO AQUI É TUDO CHAT GPT -->
@@ -178,6 +187,6 @@
         <p>© Lhotse Cycles 2024 All Rights Reserved.</p>
     </div>
 </footer>
-
+<script src="produtos.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ body{
     text-align: center;
     color: white;
     background-color: lightgray;
-    border-radius: 16px; 
+    border-radius: 5px; 
     background: rgba(255, 255, 255, 0.18);
     
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -48,12 +48,14 @@ body{
     margin: 50px;
 }
 .container {
-    margin: 50px;
+    margin: 80px;
     width: 70%;
     height: 450px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    row-gap: 200px;
+    column-gap: 20px;
+    margin-bottom: 150px;
 }
 .container-city{
     margin: 50px;
@@ -179,4 +181,23 @@ footer{
     margin-top: 200px;
     display: block;
     background-color: black;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 69px;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+header .navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+header .navbar-brand img {
+    height: 50px;
+    width: auto;
 }

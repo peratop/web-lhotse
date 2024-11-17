@@ -1,0 +1,15 @@
+{
+  "name": "web-lhotse",
+  "version": "1.0.0",
+  "description": "Trabalho de desenvolvimento web com foco em front-end.\r   Matéria do professor Cleverson Avelino",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4"
+  }
+}

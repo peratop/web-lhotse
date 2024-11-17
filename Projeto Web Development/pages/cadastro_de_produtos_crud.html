@@ -48,33 +48,92 @@
                 <label for="nome-produto" class="form-label">Nome do Produto</label>
                 <input type="text" class="form-control" id="nome-produto" required>
             </div>
+        
+            <div class="mb-3">
+                <label for="imagem-produto" class="form-label">Imagem do Produto</label>
+                <input type="file" class="form-control" id="imagem-produto" accept="image/*">
+                <img id="preview-imagem" src="" alt="Pré-visualização da imagem" style="width: 100px; height: 100px; margin-top: 10px; display: none;">
+            </div>            
+        
             <div class="mb-3">
                 <label for="preco-produto" class="form-label">Preço</label>
-                <input type="number" class="form-control" id="preco-produto" required>
+                <input type="text" class="form-control" id="preco-produto" placeholder="R$ 00,00" required>
             </div>
+        
             <div class="mb-3">
-                <label for="descricao-produto" class="form-label">Descrição</label>
-                <textarea class="form-control" id="descricao-produto" rows="3" required></textarea>
+                <label for="situacao-produto" class="form-label">Situação</label>
+                <select class="form-control" id="situacao-produto" required>
+                    <option value="disponivel">Disponível</option>
+                    <option value="indisponivel">Indisponível</option>
+                    <option value="pre-venda">Pré-venda</option>
+                </select>
             </div>
+        
+            <div class="mb-3">
+                <label for="tipo-produto" class="form-label">Tipo</label>
+                <select class="form-control" id="tipo-produto" required>
+                    <option value="lhotses">Lhotse's</option>
+                    <option value="l-city">L-City</option>
+                    <option value="l-tour">L-Tour</option>
+                    <option value="l-fold">L-Fold</option>
+                    <option value="l-bmx">L-BMX</option>
+                    <option value="l-speed">L-Speed</option>
+                    <option value="l-kid">L-Kid</option>
+                </select>
+            </div>
+        
+            <div class="mb-3">
+                <label for="caracteristica1-produto" class="form-label">Característica 1</label>
+                <textarea class="form-control" id="caracteristica1-produto" rows="3" required></textarea>
+            </div>
+        
+            <div class="mb-3">
+                <label for="caracteristica2-produto" class="form-label">Característica 2</label>
+                <textarea class="form-control" id="caracteristica2-produto" rows="3" required></textarea>
+            </div>
+        
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
+        
         <hr>
+        
         <h3>Lista de Produtos</h3>
         <table id="productTable" class="table table-striped mt-3">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th>Imagem</th>
                     <th>Preço</th>
-                    <th>Descrição</th>
+                    <th>Situação</th>
+                    <th>Tipo</th>
+                    <th>Característica 1</th>
+                    <th>Característica 2</th>
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody>
-                
-            </tbody>
+            <tbody></tbody>
         </table>
     </div>
+    
+    <script>
+        document.getElementById('preco-produto').addEventListener('input', function(e) {
+            let valor = e.target.value.replace(/[^\d,]/g, '').replace(',', '.');
+            if (!/^(\d+)(\.\d{0,2})?$/.test(valor)) {
+                valor = valor.slice(0, -1);
+            }
+            e.target.value = valor ? `R$ ${parseFloat(valor).toFixed(2).replace('.', ',')}` : '';
+        });
+    
+        document.getElementById('productForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+    
+            const precoElement = document.getElementById('preco-produto');
+            const precoMySQL = precoElement.value.replace('R$', '').replace(',', '.').trim();
+    
+            console.log('Preço para MySQL:', precoMySQL);
+        });
+    </script>
 
     <script src="crud-produtos.js"></script>
 

@@ -9,12 +9,20 @@ app.use(express.json());
 const port = 3000;
 const router = express.Router();
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'home.html'));
+});
+
 // Configuração da conexão com o banco de dados
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'PUC@1234',
     database: 'web_lhotse'
+});
+
+router.get('/', (req, res) => {
+    res.send('Bem-vindo ao sistema Lhotse!');
 });
 
 // Rota para listar todos os usuários
@@ -80,11 +88,13 @@ router.put("/api/usuario/:id", (req, res) => {
     });
 });
 
+app.use('/', router);
 
-
-app.use(router);
+app.use((req, res) => {
+    res.status(404).send('Página não encontrada');
+});
 
 // Inicia o servidor
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log('Servidor rodando em http://localhost:3000');
 });

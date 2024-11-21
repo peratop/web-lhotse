@@ -11,5 +11,13 @@
   "dependencies": {
     "express": "^4.21.1",
     "mysql2": "^3.11.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peratop/web-lhotse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peratop/web-lhotse/issues"
+  },
+  "homepage": "https://github.com/peratop/web-lhotse#readme"
 }

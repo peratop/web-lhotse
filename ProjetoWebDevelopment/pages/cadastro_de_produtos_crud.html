@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Logo alinhado à esquerda -->
+                <a class="navbar-brand" href="home.html">
+                    <img class="img" src="lhotseB.svg" alt="Logo" width="200" class="d-inline-block align-top">
+                </a>
+                <!-- Botão para navegação mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menu de navegação alinhado à direita -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Tela Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro_de_usuario_crud.html">Cadastro de Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro_de_produtos_crud.html">Cadastro de Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>    
+    <div class="container mt-5">
+        <h2 class="text-center">Cadastro de Produtos</h2>
+        <form id="productForm">
+            <div class="mb-3">
+                <label for="nome-produto" class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+        
+            <div class="mb-3">
+                <label for="imagem-produto" class="form-label">Imagem do Produto</label>
+                <input type="file" class="form-control" id="imagem" accept="image/*">
+                <img id="preview-imagem" src="" alt="Pré-visualização da imagem" style="width: 100px; height: 100px; margin-top: 10px; display: none;">
+            </div>            
+        
+            <div class="mb-3">
+                <label for="preco-produto" class="form-label">Preço</label>
+                <input type="text" class="form-control" id="preco" placeholder="R$ 00,00" required>
+            </div>
+        
+            <div class="mb-3">
+                <label for="situacao-produto" class="form-label">Situação</label>
+                <select class="form-control" id="situacao" required>
+                    <option value="disponivel">Disponível</option>
+                    <option value="indisponivel">Indisponível</option>
+                    <option value="pre-venda">Pré-venda</option>
+                </select>
+            </div>
+        
+            <div class="mb-3">
+                <label for="tipo-produto" class="form-label">Tipo</label>
+                <select class="form-control" id="tipo" required>
+                    <option value="lhotses">Lhotse's</option>
+                    <option value="l-city">L-City</option>
+                    <option value="l-tour">L-Tour</option>
+                    <option value="l-fold">L-Fold</option>
+                    <option value="l-bmx">L-BMX</option>
+                    <option value="l-speed">L-Speed</option>
+                    <option value="l-kid">L-Kid</option>
+                </select>
+            </div>
+        
+            <div class="mb-3">
+                <label for="caracteristica1-produto" class="form-label">Característica 1</label>
+                <textarea class="form-control" id="caracteristica1" rows="3" required></textarea>
+            </div>
+        
+            <div class="mb-3">
+                <label for="caracteristica2-produto" class="form-label">Característica 2</label>
+                <textarea class="form-control" id="caracteristica2" rows="3" required></textarea>
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+        
+        <hr>
+        
+        <h3>Lista de Produtos</h3>
+        <table id="productTable" class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                    <th>Preço</th>
+                    <th>Situação</th>
+                    <th>Tipo</th>
+                    <th>Característica 1</th>
+                    <th>Característica 2</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Conteúdo será preenchido pelo JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="crud-produtos.js"></script>
+
+    <footer style="background-color: #0c0c0c; color: #fff; padding: 40px 0; font-family: Arial, sans-serif; margin-top: 200px;">
+        <div style="display: flex; justify-content: space-around; max-width: 1200px; margin: 0 auto;">
+            <!-- Coluna Sobre Nós -->
+            <div style="flex: 1; margin: 0 20px;">
+                <h3 style="border-bottom: 2px solid #555; padding-bottom: 10px;">Sobre Nós</h3>
+                <p>Lhotse Cycles é uma empresa dedicada a fornecer as melhores bicicletas e acessórios para ciclistas de todos os níveis.</p>
+            </div>
+            
+            <!-- Coluna Endereço -->
+            <div style="flex: 1; margin: 0 20px;">
+                <h3 style="border-bottom: 2px solid #555; padding-bottom: 10px;">Endereço</h3>
+                <p>Rua das Montanhas, 123, São Paulo, SP</p>
+            </div>
+
+            <!-- Coluna Nossas Políticas -->
+            <div style="flex: 1; margin: 0 20px;">
+                <h3 style="border-bottom: 2px solid #555; padding-bottom: 10px;">Nossas Políticas</h3>
+                <p><a href="#" style="color: #fff; text-decoration: none;">Política de Privacidade</a></p>
+                <p><a href="#" style="color: #fff; text-decoration: none;">Termos de Uso</a></p>
+            </div>
+
+            <!-- Coluna Contatos -->
+            <div style="flex: 1; margin: 0 20px;">
+                <h3 style="border-bottom: 2px solid #555; padding-bottom: 10px;">Contatos</h3>
+                <p>Email: <a href="mailto:contato@lhotsecycles.com" style="color: #fff; text-decoration: none;">contato@lhotsecycles.com</a></p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+        </div>
+
+        <!-- Direitos Reservados -->
+        <div style="text-align: center; margin-top: 40px; border-top: 1px solid #555; padding-top: 20px;">
+            <p>© Lhotse Cycles 2024 All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

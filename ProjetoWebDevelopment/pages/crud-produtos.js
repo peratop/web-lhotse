@@ -1,3 +1,9 @@
+productForm.addEventListener("submit", (event) => {
+    event.preventDefault(); // Evita o recarregamento da página
+    // ... restante do código
+});
+
+  
 // Carregar produtos ao abrir a página
 document.addEventListener('DOMContentLoaded', loadProducts);
 
@@ -143,3 +149,95 @@ document.querySelector('form').addEventListener('submit', async function (event)
         alert('Erro ao cadastrar o produto');
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const productForm = document.getElementById("productForm");
+    const productTableBody = document.querySelector("#productTable tbody");
+  
+    let productId = 1; // Variável para gerenciar IDs dos produtos
+  
+    productForm.addEventListener("submit", (event) => {
+      event.preventDefault(); // Impede o envio padrão do formulário
+  
+      // Capturar valores do formulário
+      const nome = document.getElementById("nome").value;
+      const imagemInput = document.getElementById("imagem");
+      const preco = document.getElementById("preco").value;
+      const situacao = document.getElementById("situacao").value;
+      const tipo = document.getElementById("tipo").value;
+      const caracteristica1 = document.getElementById("caracteristica1").value;
+      const caracteristica2 = document.getElementById("caracteristica2").value;
+  
+      // Pré-visualizar a imagem
+      let imagemURL = "";
+      if (imagemInput.files && imagemInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          imagemURL = e.target.result;
+          adicionarProduto(
+            productId++,
+            nome,
+            imagemURL,
+            preco,
+            situacao,
+            tipo,
+            caracteristica1,
+            caracteristica2
+          );
+        };
+        reader.readAsDataURL(imagemInput.files[0]);
+      } else {
+        adicionarProduto(
+          productId++,
+          nome,
+          "",
+          preco,
+          situacao,
+          tipo,
+          caracteristica1,
+          caracteristica2
+        );
+      }
+  
+      // Limpar formulário
+      productForm.reset();
+      document.getElementById("preview-imagem").style.display = "none";
+    });
+  
+    // Função para adicionar produto à tabela
+    function adicionarProduto(id, nome, imagem, preco, situacao, tipo, caracteristica1, caracteristica2) {
+      const row = document.createElement("tr");
+  
+      row.innerHTML = `
+        <td>${id}</td>
+        <td>${nome}</td>
+        <td>
+          ${imagem ? `<img src="${imagem}" alt="${nome}" style="width: 50px; height: 50px;">` : "Sem imagem"}
+        </td>
+        <td>${preco}</td>
+        <td>${situacao}</td>
+        <td>${tipo}</td>
+        <td>${caracteristica1}</td>
+        <td>${caracteristica2}</td>
+        <td>
+          <button class="btn btn-warning btn-sm" onclick="editarProduto(${id})">Editar</button>
+          <button class="btn btn-danger btn-sm" onclick="removerProduto(this)">Remover</button>
+        </td>
+      `;
+  
+      productTableBody.appendChild(row);
+    }
+  
+    // Função para remover produto
+    window.removerProduto = function (button) {
+      const row = button.parentNode.parentNode;
+      row.remove();
+    };
+  
+    // Função para editar produto (exemplo básico)
+    window.editarProduto = function (id) {
+      alert(`Função de edição do produto com ID ${id} ainda não implementada.`);
+    };
+  });
+  

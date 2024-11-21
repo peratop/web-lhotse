@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra</title>
+  <link rel="stylesheet" href="compra.css">
+</head>
+<body>
+  <h1>Finalizar Compra</h1>
+  <p>Você está comprando: <span id="product-name"></span></p>
+  <form id="purchaseForm">
+    <label for="quantity">Quantidade:</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+    <label for="payment">Forma de Pagamento:</label>
+    <select id="payment" name="payment" required>
+      <option value="cartao">Cartão de Crédito</option>
+      <option value="boleto">Boleto</option>
+      <option value="pix">PIX</option>
+    </select>
+
+    <label for="address">Endereço de Entrega:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <button type="submit">Finalizar Compra</button>
+  </form>
+
+  <script src="compra.js"></script>
+</body>
+</html>

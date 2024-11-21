@@ -62,7 +62,7 @@
     <div class="container-bikes">
         <div class="container-city">
             <div>
-                <h1>Lhotse's</h1>
+                <h1>L-City</h1>
                 <p>Uma linha de bicicletas perfeitas para o uso em centros urbanos</p>
             </div>
             <div class="container">
@@ -75,7 +75,16 @@
                         <li>Característica #1, lorem ipsum dolor sit amet.</li>
                         <li>Característica #2 lorem ipsum dolor sit amet.</li>
                     </ul>
-                    <a href="#">Ver detalhes</a>
+                    <a><button class="buy-btn" onclick="redirectToPurchasePage('ProdutoX')">Comprar</button></a>
+                    <script>
+                    function redirectToPurchasePage(productName) {
+                        // Codifique o nome do produto para evitar problemas em URLs
+                        const encodedProductName = encodeURIComponent(productName);
+                      
+                        // Redirecione para a página de compra com o nome do produto como query string
+                        window.location.href = `compra.html?produto=${encodedProductName}`;
+                      }
+                    </script>  
                 </div>
     
                 <div class="card">
@@ -106,7 +115,7 @@
     
         <div class="container-mountain">
             <div>
-                <h1>L-City</h1>
+                <h1>L-Sports</h1>
                 <p>Uma linha de bicicletas perfeitas para declives e aventuras</p>
             </div>
             <div class="container">
@@ -148,321 +157,85 @@
             </div>
         </div>
     </div>
+    <style>
+        .buy-btn {
+  background-color: white;
+  color: #28a745;
+  border: none;
+}
 
-    <div class="container-mountain">
-        <div>
-            <h1>L-Tour</h1>
-            <p>Uma linha de bicicletas perfeitas para declives e aventuras</p>
-        </div>
-        <div class="container">
-            <div class="card">
-                <img src="mountain1.avif" alt="Classica">
-                <h2>L-Mountain</h2>
-                <p class="preco">Preço: R$ 2500,00</p>
-                <p class="disponivel">Disponível</p>
-                <ul>
-                    <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                    <li>Característica #2 lorem ipsum dolor sit amet.</li>
-                </ul>
-                <a href="#">Ver detalhes</a>
-            </div>
-
-            <div class="card">
-                <img src="mountain2.avif" alt="Maris">
-                <h2>L-Enduro</h2>
-                <p class="preco">Preço: R$ 2345,00</p>
-                <p class="disponivel">Disponível</p>
-                <ul>
-                    <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                    <li>Característica #2 lorem ipsum dolor sit amet.</li>
-                </ul>
-                <a href="#">Ver Detalhes</a>
-            </div>
-
-            <div class="card">
-                <img src="mountain3.avif" alt="Maris">
-                <h2>L-Runner</h2>
-                <p class="preco">Preço: R$ 6500,00</p>
-                <p class="disponivel">Disponível</p>
-                <ul>
-                    <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                    <li>Característica #2 lorem ipsum dolor sit amet.</li>
-                </ul>
-                <a href="#">Ver Detalhes</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-mountain">
-    <div>
-        <h1>L-Fold</h1>
-        <p>Uma linha de bicicletas perfeitas para declives e aventuras</p>
-    </div>
-    <div class="container">
-        <div class="card">
-            <img src="mountain1.avif" alt="Classica">
-            <h2>L-Mountain</h2>
-            <p class="preco">Preço: R$ 2500,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver detalhes</a>
-        </div>
-
-        <div class="card">
-            <img src="mountain2.avif" alt="Maris">
-            <h2>L-Enduro</h2>
-            <p class="preco">Preço: R$ 2345,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver Detalhes</a>
-        </div>
-
-        <div class="card">
-            <img src="mountain3.avif" alt="Maris">
-            <h2>L-Runner</h2>
-            <p class="preco">Preço: R$ 6500,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver Detalhes</a>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="container-mountain">
-    <div>
-        <h1>L-BMX</h1>
-        <p>Uma linha de bicicletas perfeitas para declives e aventuras</p>
-    </div>
-    <div class="container">
-        <div class="card">
-            <img src="mountain1.avif" alt="Classica">
-            <h2>L-Mountain</h2>
-            <p class="preco">Preço: R$ 2500,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver detalhes</a>
-        </div>
-
-        <div class="card">
-            <img src="mountain2.avif" alt="Maris">
-            <h2>L-Enduro</h2>
-            <p class="preco">Preço: R$ 2345,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver Detalhes</a>
-        </div>
-
-        <div class="card">
-            <img src="mountain3.avif" alt="Maris">
-            <h2>L-Runner</h2>
-            <p class="preco">Preço: R$ 6500,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver Detalhes</a>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="container-mountain">
-    <div>
-        <h1>L-Speed</h1>
-        <p>Uma linha de bicicletas perfeitas para declives e aventuras</p>
-    </div>
-    <div class="container">
-        <div class="card">
-            <img src="mountain1.avif" alt="Classica">
-            <h2>L-Mountain</h2>
-            <p class="preco">Preço: R$ 2500,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver detalhes</a>
-        </div>
-
-        <div class="card">
-            <img src="mountain2.avif" alt="Maris">
-            <h2>L-Enduro</h2>
-            <p class="preco">Preço: R$ 2345,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver Detalhes</a>
-        </div>
-
-        <div class="card">
-            <img src="mountain3.avif" alt="Maris">
-            <h2>L-Runner</h2>
-            <p class="preco">Preço: R$ 6500,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver Detalhes</a>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="container-mountain">
-    <div>
-        <h1>L-Kid</h1>
-        <p>Uma linha de bicicletas perfeitas para declives e aventuras</p>
-    </div>
-    <div class="container">
-        <div class="card">
-            <img src="mountain1.avif" alt="Classica">
-            <h2>L-Mountain</h2>
-            <p class="preco">Preço: R$ 2500,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver detalhes</a>
-        </div>
-
-        <div class="card">
-            <img src="mountain2.avif" alt="Maris">
-            <h2>L-Enduro</h2>
-            <p class="preco">Preço: R$ 2345,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver Detalhes</a>
-        </div>
-
-        <div class="card">
-            <img src="mountain3.avif" alt="Maris">
-            <h2>L-Runner</h2>
-            <p class="preco">Preço: R$ 6500,00</p>
-            <p class="disponivel">Disponível</p>
-            <ul>
-                <li>Característica #1, lorem ipsum dolor sit amet.</li>
-                <li>Característica #2 lorem ipsum dolor sit amet.</li>
-            </ul>
-            <a href="#">Ver Detalhes</a>
-        </div>
-    </div>
-</div>
-</div>
-
-<div>
-    <div class="container-mountain" id="Lhotse's">
-        <div>
-            <h1>Lhotse's (Mountain Bike)</h1>
-            <p>Uma linha de bicicletas perfeitas para trilhas e montanhas</p>
-        </div>
-        <div class="container"></div>
-    </div>
-
-    <div class="container-mountain" id="L-City">
-        <div>
-            <h1>L-City</h1>
-            <p>Uma linha de bicicletas perfeitas para o uso urbano</p>
-        </div>
-        <div class="container"></div>
-    </div>
-
-    <div class="container-mountain" id="L-Tour">
-        <div>
-            <h1>L-Tour</h1>
-            <p>Uma linha de bicicletas para longas distâncias e viagens</p>
-        </div>
-        <div class="container"></div>
-    </div>
-
-    <div class="container-mountain" id="L-Fold">
-        <div>
-            <h1>L-Fold</h1>
-            <p>Uma linha de bicicletas dobráveis para o dia a dia</p>
-        </div>
-        <div class="container"></div>
-    </div>
-
-    <div class="container-mountain" id="L-BMX">
-        <div>
-            <h1>L-BMX</h1>
-            <p>Uma linha de bicicletas para manobras radicais</p>
-        </div>
-        <div class="container"></div>
-    </div>
-
-    <div class="container-mountain" id="L-Speed">
-        <div>
-            <h1>L-Speed</h1>
-            <p>Uma linha de bicicletas de alta performance</p>
-        </div>
-        <div class="container"></div>
-    </div>
-
-    <div class="container-mountain" id="L-Kid">
-        <div>
-            <h1>L-Kid</h1>
-            <p>Uma linha de bicicletas para crianças</p>
-        </div>
-        <div class="container"></div>
-    </div>
-
+    </style>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+        function openPurchaseModal(productName) {
+  // Abrir modal com informações
+  const modal = document.getElementById('purchaseModal');
+  modal.style.display = 'block';
 
-            produtos.forEach(product => {
-                const card = document.createElement('div');
-                card.classList.add('card');
+  // Exibe o nome do produto
+  document.getElementById('product-name').textContent = productName;
+}
 
-                card.innerHTML = `
-                    <img src="${product.imagem}" alt="${product.nome}">
-                    <h2>${product.nome}</h2>
-                    <p class="preco">Preço: R$ ${product.preco}</p>
-                    <p class="situacao">${product.situacao}</p>
-                    <p class="tipo">${product.tipo}</p>
-                    <ul>
-                        <li>${product.caracteristica1}</li>
-                        <li>${product.caracteristica2}</li>
-                    </ul>
-                    <a href="#">Ver Detalhes</a>
-                `;
+// Fechar modal
+function closeModal() {
+  const modal = document.getElementById('purchaseModal');
+  modal.style.display = 'none';
+}
 
-                const tipoProduto = product.tipo.trim();
-                const container = document.getElementById(tipoProduto);
-
-                if (container) {
-                    container.appendChild(card);
-                }
-            });
-        });
     </script>
-</div>
-
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()">&times;</span>
+          <h2>Comprar <span id="product-name"></span></h2>
+          <form id="purchaseForm">
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            
+            <label for="payment">Forma de Pagamento:</label>
+            <select id="payment" name="payment" required>
+              <option value="cartao">Cartão de Crédito</option>
+              <option value="boleto">Boleto</option>
+              <option value="pix">PIX</option>
+            </select>
+            
+            <label for="address">Endereço de Entrega:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+            
+            <button type="submit">Finalizar Compra</button>
+          </form>
+        </div>
+      </div>
+<style>      
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 50%;
+        max-width: 500px;
+        text-align: center;
+      }
+      
+      .close-btn {
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      
+      button {
+        margin-top: 10px;
+      }
+</style>      
 </section>
 
  <!-- ISSO AQUI É TUDO CHAT GPT -->

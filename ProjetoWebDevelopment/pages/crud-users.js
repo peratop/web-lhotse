@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tableBody = document.getElementById('userTable').querySelector('tbody');
             tableBody.innerHTML = ''; // Limpa a tabela antes de exibir os dados
             
-            users.forEachs(user => {
+            users.forEach(user => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${user.id}</td>
